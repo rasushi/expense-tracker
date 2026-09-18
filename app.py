@@ -5,8 +5,10 @@ for i in range(num_items):
     name=input("Enter the name of the expense: ")
     amount=float(input("Enter the amount of the expense: "))
     expenses.append({"name": name, "amount": amount})
+total_expense=[sum(item['amount'] for item in expenses)]
 print("Expenses added successfully!")
 
 print("Expense Tracker")
 for i in expenses:
     print(f"Name: {i['name']} \t \t\tAmount: {i['amount']}")
+print(f"Total Expense: {total_expense[0]}")
